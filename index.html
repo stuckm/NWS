@@ -1,18 +1,109 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>National Weather Service</title>
+    <meta name="description" content="Weather Forecasts" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
+  />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-wrapper grey darken-2">
+          <a href="index.html" class="brand-logo center hide-on-med-and-up">NWS</a>
+          <a href="index.html" class="brand-logo center hide-on-small-only">National Weather Service</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="left hide-on-med-and-down">
+            <li><a href="#hourly-row">Hourly</a></li>
+            <li><a href="#daily-row">Daily</a></li>
+            <li><a href="#mapid">Radar Maps</a></li>
+          </ul>
+        </div>
 
-<body>
+      </nav>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+      <ul class="sidenav" id="mobile-demo">
+        
+        <li><a href="#hourly-row">Hourly</a></li>
+        <li><a href="#daily-row">Daily</a></li>
+        <li><a href="#mapid">Radar Maps</a></li>
+      </ul>
+    </header>
+    <main id="main">
+  <div class="container search">
+  <div class="row ">
+    <form class="col s12 center-align">
+      <div class="row ">
+        <div class="input-field col s12 ">
+          <button id="sub" class="btn  btn-flat waves-effect waves-light prefix ">
+            <i class="material-icons medium">search</i>
+          </button>
+          <input id="icon_prefix2" class="city-name" type="text"></input>
+          <label for="icon_prefix2">Search a City, State, or Country for Weather Info</label>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+      <div id="root" class="container">
+      
+        </div>
 
-</body>
+        <div id="map-container" class="container">
+
+          <div id="mapid"></div>
+          
+        </div>
+      
+    </main>
+    <footer class="page-footer grey darken-2">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">National Weather Service</h5>
+            <h6><em>Mission</em></h6>
+            <p class="grey-text text-lighten-4">The National Weather Service (NWS) provides weather, hydrologic, and climate forecasts and warnings for the United States, its territories, adjacent waters and ocean areas, for the protection of life and property and the enhancement of the national economy. NWS data and products form a national information database and infrastructure which can be used by other governmental agencies, the private sector, the public, and the global community.</p>
+          </div>
+          <div class="col l6 s12 center-align">
+            <img class="responsive-img " id="logo" src="logo.png">
+          </div>
+
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+       For Educational Purposes
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+    <script src="script.js"></script>
+  </body>
 </html>

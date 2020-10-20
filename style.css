@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
+}
+.current-temp{
+    font-size: 3em;
+}
+
+.cast-card{
+    padding: 5px;
+}
+
+.temp{
+    font-size: 48px;
+
+}
+
+.temp-day{
+    font-size: 48px;
+    margin: 0;
+}
+.search{
+    margin-top: 20px !important;
+}
+
+#mapid{
+    height: 60vh;
+    margin: 2rem;
+    width: 95%;
+}
+
+#logo{
+    height: 20vh;
+}
